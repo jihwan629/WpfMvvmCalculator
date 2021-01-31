@@ -36,10 +36,7 @@ namespace WpfMvvmCalculator
                     inputString = value;
                     OnPropertyChanged("InputString");
 
-                    if(value != "")
-                    {
-                        displayText = value;
-                    }
+                    this.DisplayText = value;
                 }
             }
             get { return inputString; }
@@ -48,7 +45,7 @@ namespace WpfMvvmCalculator
         // 출력창 바인딩
         public string DisplayText
         {
-            internal set
+            protected set
             {
                 if(displayText != value)
                 {

@@ -35,7 +35,7 @@ namespace WpfMvvmCalculator
             if (length > 0)
                 c.InputString = c.InputString.Substring(0, length);
             else
-                c.InputString = c.DisplayText = "";
+                c.InputString = "";
         }
     }
 
@@ -62,8 +62,7 @@ namespace WpfMvvmCalculator
 
         public void Execute(object parameter)
         {
-            c.InputString = c.DisplayText = "";
-            c.Op1 = null;
+            c.InputString = "";
         }
     }
 

@@ -33,7 +33,7 @@
             </Grid.ColumnDefinitions>
             
             <Border BorderThickness="1" BorderBrush="Black">
-                <TextBlock FontSize="150" VerticalAlignment="Center"
+                <TextBlock FontSize="15" VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Text="{Binding DisplayText}"/>
             </Border>
