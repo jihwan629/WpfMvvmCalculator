@@ -63,6 +63,7 @@ namespace WpfMvvmCalculator
         public void Execute(object parameter)
         {
             c.InputString = "";
+            c.Op = string.Empty;
             c.Op1 = null;
         }
     }
@@ -107,6 +108,7 @@ namespace WpfMvvmCalculator
         // displayText 길이가 0이 넘을 때만 실행
         public bool CanExecute(object parameter)
         {
+            if (c.Op != string.Empty && c.Op != null) return false;
             return c.DisplayText.Length > 0;
         }
 
@@ -157,6 +159,7 @@ namespace WpfMvvmCalculator
             double op2 = double.Parse(c.InputString);
             // 소수점 5자리 까지 표기
             c.InputString = string.Format("{0:0.#####}",calculate(c.Op, (double)c.Op1, op2));
+            c.Op = string.Empty;
             c.Op1 = double.Parse(c.InputString);
         }
 
