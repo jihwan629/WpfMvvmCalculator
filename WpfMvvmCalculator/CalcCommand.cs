@@ -38,6 +38,35 @@ namespace WpfMvvmCalculator
                 c.InputString = c.DisplayText = "";
         }
     }
+
+    class Clear : ICommand
+    {
+        private CalcViewModel c;
+
+        public Clear(CalcViewModel _c)
+        {
+            this.c = _c;
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        // displayText 길이가 0이 넘을 때만 실행
+        public bool CanExecute(object parameter)
+        {
+            return c.DisplayText.Length > 0;
+        }
+
+        public void Execute(object parameter)
+        {
+            c.InputString = c.DisplayText = "";
+            c.Op1 = null;
+        }
+    }
+
     class CalcCommand
     {
     }
