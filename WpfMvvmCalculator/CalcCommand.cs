@@ -154,7 +154,8 @@ namespace WpfMvvmCalculator
         public void Execute(object parameter)
         {
             double op2 = double.Parse(c.InputString);
-            c.InputString = calculate(c.Op, (double)c.Op1, op2).ToString();
+            // 소수점 5자리 까지 표기
+            c.InputString = string.Format("{0:0.#####}",calculate(c.Op, (double)c.Op1, op2));
             c.Op1 = double.Parse(c.InputString);
         }
 
