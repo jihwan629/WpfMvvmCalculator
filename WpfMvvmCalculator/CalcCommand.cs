@@ -67,6 +67,28 @@ namespace WpfMvvmCalculator
         }
     }
 
+    class Append : ICommand
+    {
+        private CalcViewModel c;
+
+        public Append(CalcViewModel _c)
+        {
+            this.c = _c;
+        }
+
+        public event EventHandler CanExecuteChanged;
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            c.InputString += parameter;
+        }
+    }
+
     class CalcCommand
     {
     }

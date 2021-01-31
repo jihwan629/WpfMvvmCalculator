@@ -49,17 +49,17 @@
 
         <!--1행-->
         <Button Content="1"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="1"
                 Grid.Row="1" Grid.Column="0"/>
 
         <Button Content="2"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="2"
                 Grid.Row="1" Grid.Column="1"/>
 
         <Button Content="3"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="3"
                 Grid.Row="1" Grid.Column="2"/>
 
@@ -70,17 +70,17 @@
 
         <!--2행-->
         <Button Content="4"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="4"
                 Grid.Row="2" Grid.Column="0"/>
 
         <Button Content="5"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="5"
                 Grid.Row="2" Grid.Column="1"/>
 
         <Button Content="6"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="6"
                 Grid.Row="2" Grid.Column="2"/>
 
@@ -91,17 +91,17 @@
 
         <!--3행-->
         <Button Content="7"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="7"
                 Grid.Row="3" Grid.Column="0"/>
 
         <Button Content="8"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="8"
                 Grid.Row="3" Grid.Column="1"/>
 
         <Button Content="9"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="9"
                 Grid.Row="3" Grid.Column="2"/>
 
@@ -112,7 +112,7 @@
 
         <!--4행-->
         <Button Content="0"
-                Command="{Binding}"
+                Command="{Binding Append}"
                 CommandParameter="0"
                 Grid.Row="4" Grid.Column="0"/>
 
