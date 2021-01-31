@@ -65,8 +65,10 @@ namespace WpfMvvmCalculator
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        // 연산자 저장
         public string Op { get; set; }
-        public string Op1 { get; set; }
+        // 이전 숫자 저장
+        public double Op1 { get; set; }
 
         // 커맨드 오브젝트
         public ICommand Append { protected set; get; }
