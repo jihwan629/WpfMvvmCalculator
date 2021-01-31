@@ -39,11 +39,11 @@
             </Border>
 
             <Button Content="Back"
-                Command="{Binding}"
+                Command="{Binding Backspace}"
                 Grid.Column="1"/>
 
             <Button Content="Clear"
-                Command="{Binding}"
+                Command="{Binding Clear}"
                 Grid.Column="2"/>
         </Grid>
 
