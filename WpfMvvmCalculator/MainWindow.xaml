@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMvvmCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPF MVVM Calculator" Height="450" Width="800">
+    
     <Grid HorizontalAlignment="Center"
           VerticalAlignment="Center">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
@@ -22,10 +24,112 @@
             <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
 
-        <Border BorderThickness="1" BorderBrush="Black">
-            <TextBlock FontSize="150" VerticalAlignment="Center"
+        <!--0행-->
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Border BorderThickness="1" BorderBrush="Black">
+                <TextBlock FontSize="150" VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Text="{Binding DisplayText}"/>
-        </Border>
+            </Border>
+
+            <Button Content="Back"
+                Command="{Binding}"
+                Grid.Column="1"/>
+
+            <Button Content="Clear"
+                Command="{Binding}"
+                Grid.Column="2"/>
+        </Grid>
+
+        <!--1행-->
+        <Button Content="1"
+                Command="{Binding}"
+                CommandParameter="1"
+                Grid.Row="1" Grid.Column="0"/>
+
+        <Button Content="2"
+                Command="{Binding}"
+                CommandParameter="2"
+                Grid.Row="1" Grid.Column="1"/>
+
+        <Button Content="3"
+                Command="{Binding}"
+                CommandParameter="3"
+                Grid.Row="1" Grid.Column="2"/>
+
+        <Button Content="+"
+                Command="{Binding}"
+                CommandParameter="+"
+                Grid.Row="1" Grid.Column="3"/>
+
+        <!--2행-->
+        <Button Content="4"
+                Command="{Binding}"
+                CommandParameter="4"
+                Grid.Row="2" Grid.Column="0"/>
+
+        <Button Content="5"
+                Command="{Binding}"
+                CommandParameter="5"
+                Grid.Row="2" Grid.Column="1"/>
+
+        <Button Content="6"
+                Command="{Binding}"
+                CommandParameter="6"
+                Grid.Row="2" Grid.Column="2"/>
+
+        <Button Content="-"
+                Command="{Binding}"
+                CommandParameter="-"
+                Grid.Row="2" Grid.Column="3"/>
+
+        <!--3행-->
+        <Button Content="7"
+                Command="{Binding}"
+                CommandParameter="7"
+                Grid.Row="3" Grid.Column="0"/>
+
+        <Button Content="8"
+                Command="{Binding}"
+                CommandParameter="8"
+                Grid.Row="3" Grid.Column="1"/>
+
+        <Button Content="9"
+                Command="{Binding}"
+                CommandParameter="9"
+                Grid.Row="3" Grid.Column="2"/>
+
+        <Button Content="*"
+                Command="{Binding}"
+                CommandParameter="*"
+                Grid.Row="3" Grid.Column="3"/>
+
+        <!--4행-->
+        <Button Content="0"
+                Command="{Binding}"
+                CommandParameter="0"
+                Grid.Row="4" Grid.Column="0"/>
+
+        <Button Content="."
+                Command="{Binding}"
+                CommandParameter="."
+                Grid.Row="4" Grid.Column="1"/>
+
+        <Button Content="="
+                Command="{Binding}"
+                CommandParameter="="
+                Grid.Row="4" Grid.Column="2"/>
+
+        <Button Content="/"
+                Command="{Binding}"
+                CommandParameter="/"
+                Grid.Row="4" Grid.Column="3"/>
+        
     </Grid>
 </Window>
