@@ -63,6 +63,7 @@ namespace WpfMvvmCalculator
         public void Execute(object parameter)
         {
             c.InputString = "";
+            c.Op1 = null;
         }
     }
 
@@ -171,9 +172,5 @@ namespace WpfMvvmCalculator
 
             return 0;
         }
-    }
-
-    class CalcCommand
-    {
     }
 }
