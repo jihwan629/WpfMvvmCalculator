@@ -130,7 +130,48 @@ namespace WpfMvvmCalculator
         }
     }
 
+    class Calculate : ICommand
+    {
+        private CalcViewModel c;
 
+        public Calculate(CalcViewModel _c)
+        {
+            this.c = _c;
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        // displayText 길이가 0이 넘을 때만 실행
+        public bool CanExecute(object parameter)
+        {
+            double op2;
+            return c.Op1 != null && double.TryParse(c.InputString, out op2);
+        }
+
+        public void Execute(object parameter)
+        {
+            double op2 = double.Parse(c.InputString);
+            c.InputString = calculate(c.Op, (double)c.Op1, op2).ToString();
+            c.Op1 = double.Parse(c.InputString);
+        }
+
+        private static double calculate(string op, double op1, double op2)
+        {
+            switch(op)
+            {
+                case "+": return op1 + op2;
+                case "-": return op1 - op2;
+                case "*": return op1 * op2;
+                case "/": return op1 / op2;
+            }
+
+            return 0;
+        }
+    }
 
     class CalcCommand
     {
