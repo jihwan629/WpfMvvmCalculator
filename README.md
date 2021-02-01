@@ -1,4 +1,4 @@
-# WPF MVVM 계산기 개발
+# WPF MVVM 계산기
 
 <br>
 <br>
@@ -31,7 +31,7 @@
  
  <br>
  
- https://youtu.be/ZYLd7X1ksa8
+ https://youtu.be/VGxxOYPnSCw
  
  <img alt="WPF_Calculator" src="https://user-images.githubusercontent.com/31186176/106384761-e2f62000-640f-11eb-835b-05519cedc300.gif" width="500"/>
  
